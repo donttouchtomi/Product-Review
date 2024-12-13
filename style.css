@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0; border: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan-color: hsl(158, 36%, 37%);
+    --cream-color:hsl(30, 38%, 92%);
+    --dark-blue-color: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --white-color: hsl(0, 0%, 100%);
+    --main-font-family: "Montserrat", sans-serif;
+    --head-font-family:  "Fraunces", serif;
+} 
+
+body {
+    background-color:var(--cream-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.productReview {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+
+.productImg {
+    flex: 1 1 300px;
+}
+
+.productImg img {
+    width:  100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.productImg img:nth-child(2){
+    display: none;
+}
+
+.productText {
+    flex: 1 1 300px;
+    padding: 24px;
+}
+
+.productText p:nth-child(1) {
+    color :var(--grayish-blue);
+    text-transform: uppercase;
+    font-family: var(--main-font-family);
+    letter-spacing: 5px;
+    margin-bottom: 32px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.productText h1 {
+    font-family: var(--head-font-family);
+    color: var(--dark-blue-color);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.productText p:nth-child(3){
+    color: var(--grayish-blue);
+    font-family: var(--main-font-family);
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.price h2 {
+    font-family: var(--head-font-family);
+    color: var(--dark-cyan-color);
+    font-size: 32px;
+}
+
+.price p {
+    text-decoration: line-through;
+    font-family: var(--main-font-family);
+    color: var(--grayish-blue);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.productReview button {
+    width: 100%;
+    background-color: hsl(158, 36%, 37%) ;
+    padding: 15px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    font-family: var(--main-font-family);
+    cursor: pointer;
+}
+
+.productReview button:hover {
+    background-color: var(--dark-blue-color);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 615px){
+    body {
+        padding: 24px;
+    }
+    .productImg img {
+        display: none;
+    }
+
+    .productImg img:nth-child(2){
+        display: block;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+}
